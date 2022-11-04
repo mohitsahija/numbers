@@ -1,0 +1,33 @@
+from operator import truediv
+from tkinter import *
+
+import tkinter as tk
+
+top = Tk()
+
+top.title("Python text widget")
+
+top.geometry("400x300")
+
+message = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+ever since the 1500s"
+
+f = Frame(top)
+
+tb = Text(f,height=13,width=20,wrap='word')
+
+tb.insert(END,message)
+
+tb.pack(side=LEFT,expand=YES)
+
+sb=Scrollbar(f)
+
+sb.pack(side=RIGHT,fill=BOTH)
+
+tb.config(yscrollcommand=sb.set)
+
+sb.config(command=tb.yview)
+
+f.pack(command=True)
+
+top.mainloop()

@@ -1,0 +1,23 @@
+from pickletools import pylist
+from tkinter import *
+
+
+import tkinter as tk
+
+top = Tk()
+
+sb = Scrollbar(top)
+
+sb.pack(side=RIGHT,fill=BOTH)
+
+mylist = Listbox(top,yscrollcommand=sb.set)
+
+for line in range(20):
+
+mylist.insert(END,"Num"+line)
+
+mylist.pack(side=LEFT)
+
+sb.config(command=mylist.yview)
+
+top.mainloop()
