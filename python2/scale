@@ -1,0 +1,28 @@
+import select
+from tkinter import *
+
+import tkinter as tk
+
+top = Tk()
+
+top.geometry("300x200")
+
+v = DoubleVar()
+
+l = Label(top)
+
+l.pack()
+
+def showVal():
+
+select="Horizontal scale value - "+str(v1.get())
+
+l.config(text=select,font=("Arial",14))
+
+s1 = Scale(top,variable=v,from_=1,to=200,orient=HORIZONTAL)
+
+s1.pack(anchor=CENTER)
+
+Button(top,text="Show Selected",command=showVal,bg="yellow").pack()
+
+top.mainloop()

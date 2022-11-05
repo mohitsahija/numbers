@@ -1,0 +1,13 @@
+nums=[0,1,2,3,4,5,23,7,8,9,10]
+def evenList(i):
+    if(i%2==0):
+        return i
+def oddList(i):
+    if(i%2!=0) :
+        return i    
+evenNumbers=list(filter(lambda
+x:x,map(evenList,nums)))
+oddNumbers=list(filter(lambda
+x:x,map(oddList,nums)))
+print("Odd numbers :  {0}".format(oddNumbers))
+print("Even numbers : {0}".format(evenNumbers))

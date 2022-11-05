@@ -1,0 +1,41 @@
+from tkinter import *
+
+import tkinter as tk
+
+top = Tk()
+
+top.geometry("400x300")
+
+var=StringVar()
+
+def showSelected():
+
+countries=[]
+
+cname=lb.curselection()
+
+for i in cname():
+
+opt = lb.get(i)
+
+countries.append(op)
+
+for val in countries:
+
+print(val)
+
+lb = Listbox(top,selectmode="multiple",width=10)
+
+lb.pack(padx=10,pady=10,expand=YES,fill=BOTH)
+
+x = ["India","USA","UK","Australia"]
+for item in range(len(x)):
+
+lb.insert(END,x[item])
+
+lb.itemconfig(item,bg="#bdc1d6")
+
+Button(top,text="ShowSelected",command=showSelected).pack()
+
+
+top.mainloop()
