@@ -1,0 +1,45 @@
+from tkinter import *
+root=Tk()
+root.geometry("1305x656")
+def bill():
+    fname=first_name.get()
+    lname=Last_name.get()
+    gen=Gender.get()
+    language=Languages.get()
+    email=Email.get()
+    address=Address.get()
+    state=State.get()
+    z=Zip.get()
+
+first_name=Label(root,text="First name:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=70)
+Last_name=Label(root,text="Last name:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=120)
+Gender=Label(root,text="Gender:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=170)
+Languages=Label(root,text="Languages:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=220)
+Email=Label(root,text="Email:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=270)
+Address=Label(root,text="Address",font="Arial 12 ",bg="white",fg="black").place(x=20,y=320)
+State=Label(root,text="State:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=370)
+Zip=Label(root,text="Zip:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=420)
+Credit_card_type=Label(root,text="Credit Card Type:",font="Arial 12 ",bg="white",fg="black").place(x=20,y=470)
+
+first_name=StringVar()
+Last_name=StringVar()
+Gender=StringVar()
+Languages=StringVar()
+Email=StringVar()
+Address=StringVar()
+State=StringVar()
+Zip=StringVar()
+Credit_card_type=StringVar()
+
+first_name_Entry=Entry(root,font="10",bd=4,textvariable=first_name)
+first_name_Entry.place(x=160,y=70)
+last_name_Entry=Entry(root,font="10",bd=4,textvariable=Last_name)
+last_name_Entry.place(x=160,y=120)
+gender_Entry=Radiobutton(root,text="Male",value="Male",width=50)
+gender_Entry.place(x=60,y=170)
+gender_Entry=Radiobutton(root,text="Female",value="Female",width=50)
+gender_Entry.place(x=120,y=170)
+
+root.mainloop()
+
+
